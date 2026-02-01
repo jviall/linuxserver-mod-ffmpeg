@@ -1,6 +1,6 @@
-# Docker FFmpeg Mod for Lidarr
+# LinuxServer Docker Mod for FFmpeg
 
-A Docker mod for the linuxserver/lidarr image that adds ffmpeg support for post-import scripts.
+A Docker mod for the linuxserver images that adds ffmpeg
 
 ## Usage
 
@@ -15,23 +15,9 @@ Full example:
 
 ```yaml
 services:
-  lidarr:
-    image: lscr.io/linuxserver/lidarr:latest
-    container_name: lidarr
+  nginx:
+    image: lscr.io/linuxserver/nginx:latest
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
       - DOCKER_MODS=yourusername/docker-ffmpeg-mod:latest
-    volumes:
-      - /path/to/config:/config
-      - /path/to/music:/music
-      - /path/to/downloads:/downloads
-    ports:
-      - 8686:8686
     restart: unless-stopped
 ```
-
-## What it does
-
-This mod installs ffmpeg in the Lidarr container, allowing you to use ffmpeg in post-import scripts for audio processing tasks.
