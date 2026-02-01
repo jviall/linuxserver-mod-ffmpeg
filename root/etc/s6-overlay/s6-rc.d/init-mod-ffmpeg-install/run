@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+
+  echo "**** Adding ffmpeg to package list ****"
+  # Package is already added via mod-repo-packages-to-install.list
+  # This script can be used for additional setup if needed
