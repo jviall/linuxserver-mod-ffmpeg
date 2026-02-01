@@ -8,7 +8,7 @@ Add the following environment variable to your docker-compose.yml or docker run 
 
 ```yaml
 environment:
-  - DOCKER_MODS=jviall/linuxserver-mod-ffmpeg:latest
+  - DOCKER_MODS=ghcr.io/jviall/linuxserver-mod-ffmpeg:latest:latest
 ```
 
 Full example:
@@ -18,6 +18,6 @@ services:
   nginx:
     image: lscr.io/linuxserver/nginx:latest
     environment:
-      - DOCKER_MODS=jviall/linuxserver-mod-ffmpeg:latest
+      - DOCKER_MODS=ghcr.io/jviall/linuxserver-mod-ffmpeg:latest:latest
     restart: unless-stopped
 ```
